@@ -1,0 +1,3 @@
+VCD info: dumpfile 05_VERIFICATION/waveforms/p4_n2.vcd opened for output.
+RTL PASS P=4 N=2 vectors=2862 + synchronous reset + wrapper
+05_VERIFICATION/testbench/f01_tb.sv:45: $finish called at 28676000 (1ps)

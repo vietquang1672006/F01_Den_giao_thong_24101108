@@ -1,0 +1,241 @@
+[
+  {
+    "P": 1,
+    "N": 1,
+    "vectors": 640,
+    "reachable_states": 8,
+    "reachable_edges": 64,
+    "cases": [
+      {
+        "case": "reset_overrides_disable",
+        "start_vector": 0,
+        "vectors": 3
+      },
+      {
+        "case": "two_full_cycles",
+        "start_vector": 3,
+        "vectors": 9
+      },
+      {
+        "case": "night_entry_and_return",
+        "start_vector": 12,
+        "vectors": 9
+      },
+      {
+        "case": "ena_freeze_day_night_overlay",
+        "start_vector": 21,
+        "vectors": 15
+      },
+      {
+        "case": "reset_during_night",
+        "start_vector": 36,
+        "vectors": 4
+      },
+      {
+        "case": "seeded_random",
+        "start_vector": 40,
+        "vectors": 600
+      }
+    ]
+  },
+  {
+    "P": 2,
+    "N": 2,
+    "vectors": 659,
+    "reachable_states": 20,
+    "reachable_edges": 160,
+    "cases": [
+      {
+        "case": "reset_overrides_disable",
+        "start_vector": 0,
+        "vectors": 3
+      },
+      {
+        "case": "two_full_cycles",
+        "start_vector": 3,
+        "vectors": 17
+      },
+      {
+        "case": "night_entry_and_return",
+        "start_vector": 20,
+        "vectors": 16
+      },
+      {
+        "case": "ena_freeze_day_night_overlay",
+        "start_vector": 36,
+        "vectors": 18
+      },
+      {
+        "case": "reset_during_night",
+        "start_vector": 54,
+        "vectors": 5
+      },
+      {
+        "case": "seeded_random",
+        "start_vector": 59,
+        "vectors": 600
+      }
+    ]
+  },
+  {
+    "P": 3,
+    "N": 3,
+    "vectors": 678,
+    "reachable_states": 32,
+    "reachable_edges": 256,
+    "cases": [
+      {
+        "case": "reset_overrides_disable",
+        "start_vector": 0,
+        "vectors": 3
+      },
+      {
+        "case": "two_full_cycles",
+        "start_vector": 3,
+        "vectors": 25
+      },
+      {
+        "case": "night_entry_and_return",
+        "start_vector": 28,
+        "vectors": 23
+      },
+      {
+        "case": "ena_freeze_day_night_overlay",
+        "start_vector": 51,
+        "vectors": 21
+      },
+      {
+        "case": "reset_during_night",
+        "start_vector": 72,
+        "vectors": 6
+      },
+      {
+        "case": "seeded_random",
+        "start_vector": 78,
+        "vectors": 600
+      }
+    ]
+  },
+  {
+    "P": 4,
+    "N": 2,
+    "vectors": 2862,
+    "reachable_states": 28,
+    "reachable_edges": 224,
+    "cases": [
+      {
+        "case": "reset_overrides_disable",
+        "start_vector": 0,
+        "vectors": 3
+      },
+      {
+        "case": "two_full_cycles",
+        "start_vector": 3,
+        "vectors": 33
+      },
+      {
+        "case": "night_entry_and_return",
+        "start_vector": 36,
+        "vectors": 23
+      },
+      {
+        "case": "ena_freeze_day_night_overlay",
+        "start_vector": 59,
+        "vectors": 22
+      },
+      {
+        "case": "reset_during_night",
+        "start_vector": 81,
+        "vectors": 5
+      },
+      {
+        "case": "seeded_random",
+        "start_vector": 86,
+        "vectors": 600
+      },
+      {
+        "case": "all_224_reachable_edges",
+        "start_vector": 686,
+        "vectors": 2176
+      }
+    ]
+  },
+  {
+    "P": 5,
+    "N": 3,
+    "vectors": 705,
+    "reachable_states": 40,
+    "reachable_edges": 320,
+    "cases": [
+      {
+        "case": "reset_overrides_disable",
+        "start_vector": 0,
+        "vectors": 3
+      },
+      {
+        "case": "two_full_cycles",
+        "start_vector": 3,
+        "vectors": 41
+      },
+      {
+        "case": "night_entry_and_return",
+        "start_vector": 44,
+        "vectors": 30
+      },
+      {
+        "case": "ena_freeze_day_night_overlay",
+        "start_vector": 74,
+        "vectors": 25
+      },
+      {
+        "case": "reset_during_night",
+        "start_vector": 99,
+        "vectors": 6
+      },
+      {
+        "case": "seeded_random",
+        "start_vector": 105,
+        "vectors": 600
+      }
+    ]
+  },
+  {
+    "P": 8,
+    "N": 4,
+    "vectors": 752,
+    "reachable_states": 60,
+    "reachable_edges": 480,
+    "cases": [
+      {
+        "case": "reset_overrides_disable",
+        "start_vector": 0,
+        "vectors": 3
+      },
+      {
+        "case": "two_full_cycles",
+        "start_vector": 3,
+        "vectors": 65
+      },
+      {
+        "case": "night_entry_and_return",
+        "start_vector": 68,
+        "vectors": 45
+      },
+      {
+        "case": "ena_freeze_day_night_overlay",
+        "start_vector": 113,
+        "vectors": 32
+      },
+      {
+        "case": "reset_during_night",
+        "start_vector": 145,
+        "vectors": 7
+      },
+      {
+        "case": "seeded_random",
+        "start_vector": 152,
+        "vectors": 600
+      }
+    ]
+  }
+]

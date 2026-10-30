@@ -1,0 +1,51 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a060)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\f01_traffic_fsm_explicit": {
+         "num_wires":         49,
+         "num_wire_bits":     59,
+         "num_pub_wires":     10,
+         "num_pub_wire_bits": 20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         53,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 20,
+            "$_AND_": 2,
+            "$_MUX_": 6,
+            "$_NOR_": 2,
+            "$_NOT_": 5,
+            "$_ORNOT_": 3,
+            "$_OR_": 6,
+            "$_SDFFE_PN0P_": 6,
+            "$_XNOR_": 1,
+            "$_XOR_": 2
+         }
+      }
+   },
+      "design": {
+         "num_wires":         49,
+         "num_wire_bits":     59,
+         "num_pub_wires":     10,
+         "num_pub_wire_bits": 20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         53,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 20,
+            "$_AND_": 2,
+            "$_MUX_": 6,
+            "$_NOR_": 2,
+            "$_NOT_": 5,
+            "$_ORNOT_": 3,
+            "$_OR_": 6,
+            "$_SDFFE_PN0P_": 6,
+            "$_XNOR_": 1,
+            "$_XOR_": 2
+         }
+      }
+}
+

@@ -1,0 +1,62 @@
+{
+  "screenshots": [
+    {
+      "file": "docs/minh_chung/01_khoi_phuc_du_an_ubuntu.png",
+      "original_attachment_name": "image(20261030-041826).png",
+      "capture_date": "2026-10-30",
+      "title": "Khôi phục dự án trong Ubuntu",
+      "supports": "Git clone từ bundle hoàn tất; thư mục F01 đã có code và tài liệu.",
+      "sha256": "21e90b1dfc5f09eb6ba501190f640ad2b2a552f2992408e1b1829c61fa91340e",
+      "image_bytes_modified": false
+    },
+    {
+      "file": "docs/minh_chung/02_waveform_gtkwave_0_700ns.png",
+      "original_attachment_name": "image(20261030-042656).png",
+      "capture_date": "2026-10-30",
+      "title": "Dạng sóng GTKWave",
+      "supports": "Ảnh tổng quan 0-700 ns có state, pc, chế độ đêm, bit nháy và uo_out.",
+      "sha256": "81826b3e5b334d61e19b56725ba84e8a8ec0ead8ba4c71f64592a232abafd8f9",
+      "image_bytes_modified": false
+    },
+    {
+      "file": "docs/minh_chung/03_danh_sach_flip_flop.png",
+      "original_attachment_name": "image(20261030-043435).png",
+      "capture_date": "2026-10-30",
+      "title": "Danh sách FF",
+      "supports": "Ảnh phần cuối danh sách Q của các FF; không hiển thị toàn bộ thống kê cell.",
+      "sha256": "075faffae8cf2a09a39c41b490cd3a430e712caeee015f7dc1d9a0f54f4e98eb",
+      "image_bytes_modified": false
+    },
+    {
+      "file": "docs/minh_chung/04_sat_success_va_6_ff.png",
+      "original_attachment_name": "image(20261030-043756).png",
+      "capture_date": "2026-10-30",
+      "title": "SAT SUCCESS và 6 FF",
+      "supports": "Có dòng $_SDFFE_PN0P_ 6 và kết quả SAT SUCCESS.",
+      "sha256": "565dd38842b55f5cb16a33f7484f4a4e6e12cc7e1bb861a6e7439e6390dbf2c7",
+      "image_bytes_modified": false
+    },
+    {
+      "file": "docs/minh_chung/05_loi_thieu_librelane.png",
+      "original_attachment_name": "image(20261030-043914).png",
+      "capture_date": "2026-10-30",
+      "title": "Lỗi môi trường ban đầu",
+      "supports": "Chưa có LibreLane/toolchain/PDK ở lần thử ban đầu; lỗi No module named librelane.",
+      "sha256": "21f5902ad928b41ddd3d3debec51cb9cb65333817eac12ccc119e4ef70716c69",
+      "image_bytes_modified": false
+    },
+    {
+      "file": "docs/minh_chung/06_flow_dung_o_cts_dpl0036.png",
+      "original_attachment_name": "image(20261030-044850).png",
+      "capture_date": "2026-10-30",
+      "title": "Flow dừng ở CTS",
+      "supports": "Lần chạy RUN_2026-10-30_11-48-00 dừng ở OpenROAD.CTS với DPL-0036; 3 instance chưa đặt hợp lệ.",
+      "sha256": "a4da7e6d2d1c805a626d26b1ccc05326a6e377170d9e31e9ff6337e0a137bf49",
+      "image_bytes_modified": false
+    }
+  ],
+  "reference_raw_results_date": "2026-10-28",
+  "user_screenshot_date": "2026-10-30",
+  "latest_observed_physical_status": "FAILED_AT_CTS_DPL_0036",
+  "retry_result_confirmed": false
+}

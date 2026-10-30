@@ -1,0 +1,12 @@
+{
+  "tools": {
+    "openroad": null,
+    "magic": null,
+    "netgen": null,
+    "klayout": null
+  },
+  "librelane_installed": false,
+  "PDK_ROOT": null,
+  "status": "NOT_RUN"
+}
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3: No module named librelane

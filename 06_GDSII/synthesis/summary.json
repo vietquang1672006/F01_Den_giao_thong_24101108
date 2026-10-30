@@ -1,0 +1,54 @@
+{
+  "mapping": "Yosys generic cells, no PDK mapping",
+  "cells": 53,
+  "flip_flops": 6,
+  "state_bits": 2,
+  "state_q_bits": [
+    12,
+    13
+  ],
+  "ff_cells": [
+    {
+      "name": "$auto$ff.cc:266:slice$345",
+      "type": "$_SDFFE_PN0P_",
+      "Q": [
+        12
+      ]
+    },
+    {
+      "name": "$auto$ff.cc:266:slice$346",
+      "type": "$_SDFFE_PN0P_",
+      "Q": [
+        13
+      ]
+    },
+    {
+      "name": "$auto$ff.cc:266:slice$347",
+      "type": "$_SDFFE_PN0P_",
+      "Q": [
+        25
+      ]
+    },
+    {
+      "name": "$auto$ff.cc:266:slice$348",
+      "type": "$_SDFFE_PN0P_",
+      "Q": [
+        26
+      ]
+    },
+    {
+      "name": "$auto$ff.cc:266:slice$349",
+      "type": "$_SDFFE_PN0P_",
+      "Q": [
+        14
+      ]
+    },
+    {
+      "name": "$auto$ff.cc:266:slice$350",
+      "type": "$_SDFFE_PN0P_",
+      "Q": [
+        19
+      ]
+    }
+  ]
+}

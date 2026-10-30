@@ -1,0 +1,14 @@
+{
+  "repo_url": "https://github.com/vietquang1672006/F01_Den_giao_thong_24101108",
+  "ci_url": null,
+  "ci_status": "NO_RUN_URL_CONFIRMED",
+  "evidence_commit": "6dca91d1a0f2429bcc04390b00eeb04c6aa68f82",
+  "local_run_date": "2026-10-28",
+  "librelane_version": null,
+  "pdk_commit": null,
+  "physical_status": "USER_SCREENSHOT_FAILED_AT_CTS_DPL_0036",
+  "user_run_tag_observed": "RUN_2026-10-30_11-48-00",
+  "user_pdk_commit_observed_in_screenshot": "8afc8346a57fe1ab7934ba5a6056ea8b43078e71",
+  "user_raw_run_files_received": false,
+  "retry_after_floorplan_change_confirmed": false
+}

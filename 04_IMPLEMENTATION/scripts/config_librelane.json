@@ -1,0 +1,8 @@
+{
+ "DESIGN_NAME":"f01_traffic_fsm_explicit",
+ "VERILOG_FILES":["dir::../rtl/f01_traffic_fsm_explicit.sv"],
+ "CLOCK_PORT":"clk","CLOCK_PERIOD":10.0,
+ "PNR_SDC_FILE":"dir::../constraints/design.sdc",
+ "SIGNOFF_SDC_FILE":"dir::../constraints/design.sdc",
+ "PDK":"sky130A","STD_CELL_LIBRARY":"sky130_fd_sc_hd"
+}

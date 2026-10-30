@@ -1,0 +1,344 @@
+
+-- Running command `
+ read_verilog -sv 04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv
+ read_verilog -sv 05_VERIFICATION/assert_safety.sv
+ prep -top f01_safety
+ flatten
+ sat -seq 1 -set-init-def -set-def-inputs -prove safe 1 -verify
+' --
+
+1. Executing Verilog-2005 frontend: 04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv
+Parsing SystemVerilog input from `04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv' to AST representation.
+Generating RTLIL representation for module `\f01_traffic_fsm_explicit'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: 05_VERIFICATION/assert_safety.sv
+Parsing SystemVerilog input from `05_VERIFICATION/assert_safety.sv' to AST representation.
+Generating RTLIL representation for module `\f01_safety'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \f01_safety
+Used module:     \f01_traffic_fsm_explicit
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \f01_safety
+Used module:     \f01_traffic_fsm_explicit
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$17 in module f01_traffic_fsm_explicit.
+Marked 3 switch rules as full_case in process $proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$17 in module f01_traffic_fsm_explicit.
+Marked 3 switch rules as full_case in process $proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7 in module f01_traffic_fsm_explicit.
+Removed 1 dead cases from process $proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$1 in module f01_traffic_fsm_explicit.
+Marked 6 switch rules as full_case in process $proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$1 in module f01_traffic_fsm_explicit.
+Removed a total of 2 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~13 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$17'.
+     1/5: $3\uo_out[5:0] [5:3]
+     2/5: $3\uo_out[5:0] [2:0]
+     3/5: $2\uo_out[5:0] [5:3]
+     4/5: $2\uo_out[5:0] [2:0]
+     5/5: $1\uo_out[5:0]
+Creating decoders for process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+     1/4: $0\night_phase[0:0]
+     2/4: $0\nc[0:0]
+     3/4: $0\pc[1:0]
+     4/4: $0\state[1:0]
+Creating decoders for process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$1'.
+     1/6: $6\next[1:0]
+     2/6: $5\next[1:0]
+     3/6: $4\next[1:0]
+     4/6: $3\next[1:0]
+     5/6: $2\next[1:0]
+     6/6: $1\next[1:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\f01_traffic_fsm_explicit.\uo_out' from process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$17'.
+No latch inferred for signal `\f01_traffic_fsm_explicit.\next' from process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$1'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\f01_traffic_fsm_explicit.\state' using process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+  created $dff cell `$procdff$135' with positive edge clock.
+Creating register for signal `\f01_traffic_fsm_explicit.\pc' using process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+  created $dff cell `$procdff$136' with positive edge clock.
+Creating register for signal `\f01_traffic_fsm_explicit.\nc' using process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+  created $dff cell `$procdff$137' with positive edge clock.
+Creating register for signal `\f01_traffic_fsm_explicit.\night_phase' using process `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+  created $dff cell `$procdff$138' with positive edge clock.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$17'.
+Removing empty process `f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$17'.
+Found and cleaned up 4 empty switches in `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+Removing empty process `f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:33$7'.
+Found and cleaned up 6 empty switches in `\f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$1'.
+Removing empty process `f01_traffic_fsm_explicit.$proc$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:0$1'.
+Cleaned up 13 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module f01_safety.
+Optimizing module f01_traffic_fsm_explicit.
+<suppressed ~15 debug messages>
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module f01_safety.
+Optimizing module f01_traffic_fsm_explicit.
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \f01_safety..
+Finding unused cells or wires in module \f01_traffic_fsm_explicit..
+Removed 2 unused cells and 53 unused wires.
+<suppressed ~4 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+Checking module f01_safety...
+Checking module f01_traffic_fsm_explicit...
+Found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module f01_safety.
+Optimizing module f01_traffic_fsm_explicit.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\f01_safety'.
+Finding identical cells in module `\f01_traffic_fsm_explicit'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \f01_safety..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \f01_traffic_fsm_explicit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$109.
+    dead port 1/2 on $mux $procmux$111.
+    dead port 2/2 on $mux $procmux$120.
+    dead port 1/2 on $mux $procmux$122.
+    dead port 1/2 on $mux $procmux$130.
+    dead port 1/2 on $mux $procmux$26.
+    dead port 1/2 on $mux $procmux$34.
+    dead port 2/2 on $mux $procmux$40.
+    dead port 2/2 on $mux $procmux$46.
+    dead port 2/2 on $mux $procmux$90.
+    dead port 1/2 on $mux $procmux$101.
+    dead port 1/2 on $mux $procmux$92.
+    dead port 2/2 on $mux $procmux$99.
+Removed 13 multiplexer ports.
+<suppressed ~6 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \f01_safety.
+  Optimizing cells in module \f01_traffic_fsm_explicit.
+    New ctrl vector for $pmux cell $procmux$20: { $auto$opt_reduce.cc:134:opt_pmux$140 $procmux$100_CMP $procmux$126_CMP }
+    New ctrl vector for $pmux cell $procmux$28: { $procmux$121_CMP $procmux$110_CMP $auto$opt_reduce.cc:134:opt_pmux$142 }
+  Optimizing cells in module \f01_traffic_fsm_explicit.
+Performed a total of 2 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\f01_safety'.
+Finding identical cells in module `\f01_traffic_fsm_explicit'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.6.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \f01_safety..
+Finding unused cells or wires in module \f01_traffic_fsm_explicit..
+Removed 0 unused cells and 29 unused wires.
+<suppressed ~1 debug messages>
+
+3.6.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module f01_safety.
+Optimizing module f01_traffic_fsm_explicit.
+
+3.6.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \f01_safety..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \f01_traffic_fsm_explicit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+3.6.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \f01_safety.
+  Optimizing cells in module \f01_traffic_fsm_explicit.
+Performed a total of 0 changes.
+
+3.6.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\f01_safety'.
+Finding identical cells in module `\f01_traffic_fsm_explicit'.
+Removed a total of 0 cells.
+
+3.6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \f01_safety..
+Finding unused cells or wires in module \f01_traffic_fsm_explicit..
+
+3.6.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module f01_safety.
+Optimizing module f01_traffic_fsm_explicit.
+
+3.6.14. Finished OPT passes. (There is nothing left to do.)
+
+3.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from mux cell f01_traffic_fsm_explicit.$procmux$38 ($mux).
+Removed top 1 bits (of 2) from port B of cell f01_traffic_fsm_explicit.$procmux$110_CMP0 ($eq).
+Removed top 1 bits (of 6) from wire f01_traffic_fsm_explicit.$2\uo_out[5:0].
+Removed top 1 bits (of 2) from wire f01_traffic_fsm_explicit.$ternary$04_IMPLEMENTATION/rtl/f01_traffic_fsm_explicit.sv:46$16_Y.
+
+3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \f01_safety..
+Finding unused cells or wires in module \f01_traffic_fsm_explicit..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.9. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.10. Executing OPT pass (performing simple optimizations).
+
+3.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module f01_safety.
+Optimizing module f01_traffic_fsm_explicit.
+
+3.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\f01_safety'.
+Finding identical cells in module `\f01_traffic_fsm_explicit'.
+Removed a total of 0 cells.
+
+3.10.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \f01_safety..
+Finding unused cells or wires in module \f01_traffic_fsm_explicit..
+
+3.10.4. Finished fast OPT passes.
+
+3.11. Printing statistics.
+
+=== f01_safety ===
+
+   Number of wires:                  7
+   Number of wire bits:             14
+   Number of public wires:           6
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     $logic_and                      1
+     $logic_not                      1
+     f01_traffic_fsm_explicit        1
+
+=== f01_traffic_fsm_explicit ===
+
+   Number of wires:                 43
+   Number of wire bits:             74
+   Number of public wires:          10
+   Number of public wire bits:      20
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 40
+     $add                            2
+     $dff                            4
+     $eq                             4
+     $logic_not                      1
+     $logic_or                       1
+     $mux                           21
+     $ne                             1
+     $not                            1
+     $pmux                           3
+     $reduce_or                      2
+
+=== design hierarchy ===
+
+   f01_safety                        1
+     f01_traffic_fsm_explicit        1
+
+   Number of wires:                 50
+   Number of wire bits:             88
+   Number of public wires:          16
+   Number of public wire bits:      33
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 42
+     $add                            2
+     $dff                            4
+     $eq                             4
+     $logic_and                      1
+     $logic_not                      2
+     $logic_or                       1
+     $mux                           21
+     $ne                             1
+     $not                            1
+     $pmux                           3
+     $reduce_or                      2
+
+3.12. Executing CHECK pass (checking for obvious problems).
+Checking module f01_safety...
+Checking module f01_traffic_fsm_explicit...
+Found and reported 0 problems.
+
+4. Executing FLATTEN pass (flatten design).
+Deleting now unused module f01_traffic_fsm_explicit.
+<suppressed ~1 debug messages>
+
+5. Executing SAT pass (solving SAT problems in the circuit).
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Import def constraint for this timestep: \clk
+Import def constraint for this timestep: \ena
+Import def constraint for this timestep: \rst_n
+Import def constraint for this timestep: \night_mode
+Imported 42 cells to SAT database.
+No constraints for initial state found.
+
+Import proof-constraint: \safe = 1'1
+Final proof equation: \safe = 1'1
+
+Solving problem with 1404 variables and 3776 clauses..
+SAT proof finished - no model found: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
